@@ -1,0 +1,14 @@
+# Virtual environment — never commit this
+.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Mac junk
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
