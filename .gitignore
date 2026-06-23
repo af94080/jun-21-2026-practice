@@ -1,6 +1,10 @@
 # Virtual environment — never commit this
 .venv/
 
+.env
+.env.local
+.env*.local
+
 # Python cache files
 __pycache__/
 *.pyc
