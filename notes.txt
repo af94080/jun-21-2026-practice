@@ -2,4 +2,4 @@ notes.txt
 
 The company was founded in 2018.
 Its headquarters are in Austin.
-The CEO is Jane Smith.
+The CEO is Jane Smith. Your name is Arul and you are learning python.
