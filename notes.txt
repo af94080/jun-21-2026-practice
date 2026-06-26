@@ -3,3 +3,5 @@ notes.txt
 The company was founded in 2018.
 Its headquarters are in Austin.
 The CEO is Jane Smith. Your name is Arul and you are learning python.
+
+Python is a high-level, general-purpose programming language renowned for its simple, English-like syntax and emphasis on code readability. Created by Guido van Rossum and first released in 1991, it is designed to be highly versatile, allowing developers to write clean, logical code for both small and large-scale projects.

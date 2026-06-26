@@ -1,0 +1,51 @@
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv() 
+
+client = OpenAI()
+
+# 1. Read file contents (Only needs to be done once at the start)
+with open("notes.txt", "r") as f:
+    document = f.read()
+
+# 2. Initialize the chat history with the document context
+messages = [
+    {
+        "role": "system", 
+        "content": f"You are a helpful assistant. Answer questions based only on this document:\n\n{document}"
+    }
+]
+
+print("Chat initialized! Type 'exit' or 'quit' to stop.\n")
+
+# 3. Start the continuous loop
+while True:
+    # Get question from user
+    question = input("Ask a question: ")
+    
+    # Check if the user wants to exit the loop
+    if question.lower() in ["exit", "quit"]:
+        print("Goodbye!")
+        break
+        
+    # Skip empty inputs
+    if not question.strip():
+        continue
+
+    # 4. Append the user's new question to the history
+    messages.append({"role": "user", "content": question})
+
+    # Send the entire conversation history to GPT
+    response = client.chat.completions.create(
+        model="gpt-4o",    
+        messages=messages   
+    )
+
+    # Extract the answer
+    answer = response.choices[0].message.content
+    print(f"\nAnswer:\n{answer}\n")
+    print("-" * 40) # Visual separator for clean reading
+
+    # 5. Append GPT's answer to the history so it remembers it next time
+    messages.append({"role": "assistant", "content": answer})
