@@ -8,7 +8,7 @@ load_dotenv()
 client = OpenAI()
 
 PATH="/Users/arulfrancis/Downloads/LA_v_Callas_supreme_court.pdf"
-
+# downloaded from https://www.supremecourt.gov/opinions/25pdf/24-109_21o3.pdf
 def load_pdf(path):
     pages = []
     with pdfplumber.open(path) as pdf:
