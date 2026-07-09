@@ -1,6 +1,8 @@
 # Proof: script runs successfully
 
 Ran on 2026-07-09, Python 3.11
+
+
 '''
 arulfrancis@Aruls-MacBook-Air jun_21_2026 % python3 ask_file_w_chunking_2.py  
 Document split into 369 chunks  
